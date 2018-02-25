@@ -1,0 +1,467 @@
+﻿
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Resume</title>
+    <style>
+      *{
+    <!--border: solid 1px black;-->  
+}
+
+body{
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #2d5647;
+  color:rgba(255,255,255,0.8);
+  font-size: 15px;
+  line-height:28px;
+  letter-spacing:2px;
+  font-weight: 200;
+}
+
+/* 複寫區 */
+ul{
+  padding: 0;
+  list-style:none;
+}
+
+h1{
+  opacity:0.8;
+}
+
+h2{
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  opacity:0.8;
+}
+h2::after{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 8px;
+  background-color: #ff6666;
+  margin-left: 10px;
+}
+h3 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+h4{
+  margin: 0;
+  margin-top: 40px;
+  opacity:0.8;
+  font-weight: 400;
+}
+h6 {
+    margin: 0;
+    margin-top: 40px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+a{
+  color: white;
+  opacity:0.8;
+  text-decoration: none;
+}
+hr{
+  border: none;
+  border-bottom: solid 4px #ff6666;
+  width: 40%;
+  margin-left: 0;
+}
+
+.resume{
+  display: flex;
+  width:950px;
+  border: solid 8px white;
+  padding: 50px;
+  position: relative;
+  
+}
+.left{
+  flex:5;
+  border-right:solid 1px #ff6666;
+}
+.right{
+  flex:7;
+}
+.left,.right{
+  padding: 15px;
+}
+.left{
+  padding-right: 50px;
+}
+.right{
+  padding-left: 50px;
+  padding-top: 150px;
+}
+.decoration{
+  width: 300px;
+  height: 140px;
+  background: linear-gradient(135deg,#ff6666,#fca4a4);
+  border-radius:70px 0px 0px 70px;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}
+.listExperience>li{
+  display: flex;
+  margin-bottom: 10px; 
+}
+.listExperience>li:nth-child(1) ul{
+  border-color:#fc5d5d;
+}
+.listExperience>li:nth-child(2) ul{
+  border-color:#fc7676;
+}
+.listExperience>li:nth-child(3) ul{
+  border-color:#f98686;
+}
+.listExperience>li:nth-child(4) ul{
+  border-color:#f9a4a4;
+}
+.listExperience li ul{
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: solid 3px white;
+}
+
+/* list skills */
+.listSkill{
+  display: flex;
+  flex-wrap: wrap;
+}
+.listSkill li{
+  display:flex;
+  flex-direction:column;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+
+.circle{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius:50%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 102, 102,0.4);
+}
+.circle::after{
+  content:"";
+  display: block;
+  background-color: #2d5647;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius:50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+.p90{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left:50%;
+  top: 0;
+  background-color: #ff6666;
+}
+.p180{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #ff6666;
+}
+.p270-1{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #ff6666;
+}
+.p270-2{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  background-color: #ff6666;
+}
+
+
+/* list program */
+.listProgram .bar{
+  width: 150px;
+  height: 10px;
+  border: solid 2px #ff6666;
+  border-radius: 5px;
+}
+.listProgram li{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.value{
+  height: 100%;
+  width: 60%;
+  background-color: #ff6666;
+}
+.value.p20{
+  width: 20%;
+}
+.value.p40{
+  width: 40%;
+}
+.value.p50{
+  width: 50%;
+}
+.value.p60{
+  width: 60%;
+}
+.value.p75{
+  width: 75%;
+}
+.btn{
+  border: solid 3px #ff6666;
+  padding:5px 10px;
+  margin-right: 10px;
+}
+.fill{
+  background-color: #ff6666;
+}
+.video{
+  position: absolute;
+  top: 1700px;
+}
+.photo{
+  position: absolute;
+  width: 100px;
+  border-radius: 30%;
+  left: 65%;
+  top: 5px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+        <div class="left">
+            <h2>エキスパートソフトウェアITエンジニア申請について</h2>
+            <hr />
+            <h6>ふりがな</h6>
+            <h3>ちぇん ちい ゆん</h3>
+            <h6>氏　　名</h6>
+            <h2>陳      祺    昀</h2>
+            <div class="block">
+                <ul>
+                    <li>生年月日：平成25 年 3月 9日生（満22歳）</li>
+                    <li>連絡先：〒80783 台湾高雄都三民区灣中街360号4-3</li>
+                    <li>Email：shiro199530309@gmail.com</li>
+                    <li>Line：boku840309</li>
+                    <li>Tel：(886)973-338-347</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <a class="btn fill" href="https://github.com/HelloShiro?tab=repositories" target="_blank">作品集</a>
+                <a class="btn" href="english_resume.html" target="_blank">English Resume</a>
+            </div>
+            <div class="block">
+                <h4>Skills</h4>
+                <h2>特技</h2>
+                <ul class="listSkill">
+                    <li>
+                        <div class="circle">
+                            <div class="p90"></div>
+                        </div>
+                        Web
+                    </li>
+                    <li>
+                        <div class="circle">
+                            <div class="p180"></div>
+                        </div>
+                        SQL Server
+                    </li>
+                    <li>
+                        <div class="circle">
+                            <div class="p270-1"></div>
+                            <div class="p270-2"></div>
+                        </div>
+                        IOS
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <h4>Programing Skills</h4>
+                <h2>プログラム言語</h2>
+                <ul class="listProgram">
+                    <li>
+                        C#
+                        <div class="bar">
+                            <div class="value p40"></div>
+                        </div>
+                    </li>
+                    <li>
+                        JAVA
+                        <div class="bar">
+                            <div class="value p20"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Swift
+                        <div class="bar">
+                            <div class="value p75"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Linux
+                        <div class="bar">
+                            <div class="value p40"></div>
+                        </div>
+                    </li>
+                    <li>
+                        HTML&CSS
+                        <div class="bar">
+                            <div class="value p20"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Python
+                        <div class="bar">
+                            <div class="value p40"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <h4>Studies</h4>
+                <h2>学歴</h2>
+                <ul class="listExperience">
+                    <li class="year">
+                        平成22-25
+                        <ul>
+                            <li>台湾高雄都道明高等学校</li>
+                        </ul>
+                    </li>
+                    <li class="year">
+                        平成25-29
+                        <ul>
+                            <li>淡江大学 国際貿易学科</li>
+                        </ul>
+                    </li>
+                    <li class="year">
+                        平成29&nbsp;&nbsp;&nbsp;&nbsp;
+                        <ul>
+                            <li>神村学園専門学校 日本語学科</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="decoration">
+                <img src="images/self.jpg" alt="" class="photo">
+            </div>
+           
+            <div class="block">
+                <h4>Works Experience</h4>
+                <h2>職歴</h2>
+                <ul class="listExperience">
+                    <li class="year">
+                        平成25
+                        <ul>
+                            <li style="font-weight: bold;">氷菓子の店員</li>
+                            <li>かき氷を細工で作り、お客様と直接触れ合う。</li>
+                        </ul>
+                    </li>
+                    <li class="year">
+                        平成28
+                        <ul>
+                            <li style="font-weight: bold;">歯科材料貿易会社営業部 研修</li>
+                            <li>
+                                七人の営業部員の営業事務として、ブラジル
+                            </li>
+                            <li>
+                                の製品を探す、輸入事務をメール、カタログ
+                            </li>
+                            <li>翻訳、展示会手伝い、電話対応を行う。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <h4>Certificate</h4>
+                <h2>免許・資格</h2>
+                <ul class="listExperience">
+                    <li class="year">
+                        平成25
+                        <ul>
+                            <li>自動車免許　取得</li>
+                        </ul>
+                    </li>
+                    <li class="year">
+                        平成27
+                        <ul>
+                            <li>
+                                TOEICスコア 755点　取得
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="year">
+                        平成29
+                        <ul>
+                            <li>
+                                日本語能力試験N2　合格
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <h4>Self Introduction</h4>
+                <h2>自己 PR</h2>
+                <ul>
+                    <li>
+                        私は卒業まで営業職の準備を続けてまいりましたが、その中でITエンジニアの友達の仕事ぶりに感銘を受け、
+                        断固たる決意を持って転職活動をしています。やる気と覚悟だけは誰にも負けません。
+                        <br><br>
+                        今の所は、まだITの技術についてネットで調べて、購入した書籍を参考して、
+                        プログラムの基本コンセプトを確立、いくつかプロジェクトを作りました。
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <h4>Reasons for Applying</h4>
+                <h2>志望動機</h2>
+                <ul>
+                    <li>
+                        大学卒業から、一生懸命でプログラムして、swift, python, java, htmlとか練習したけど、
+                        今までも日本で働く志望が忘れない。 私はwebサービスを活かす日本向けの仕事をやりたいです。
+                        <br><br>
+                        自分の履歴書をご覧に頂いてありがとうございます。以上で宜しくお願い致します。
+                    </li>
+                </ul>
+            </div>      
+        </div>
+</div>
+<div class="video"> 
+    <h1>SQL練習:</h1>
+  <video width="1024" height="768" controls>
+    <source src="images/dingbendongTest.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+  </body>
+</html>
